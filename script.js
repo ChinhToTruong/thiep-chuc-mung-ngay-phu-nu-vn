@@ -341,14 +341,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (viewName === 'studio') {
       recipientExperienceView.classList.remove('active');
       customizerView.classList.add('active');
-      modeIcon.textContent = '💌';
-      modeTooltip.textContent = 'Quay lại xem thiệp';
+      switchModeBtn.style.display = 'none';
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       customizerView.classList.remove('active');
       recipientExperienceView.classList.add('active');
-      modeIcon.textContent = '✏️';
-      modeTooltip.textContent = 'Tự tạo thiệp mới';
+      switchModeBtn.style.display = 'flex';
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
